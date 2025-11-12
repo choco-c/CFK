@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap');
 :root{
     --primary-color:#693e23;
     --secondary-color:#d8a468;
@@ -9,6 +8,7 @@
     --max-width: 1200px;
     --header-font-1: "Alfa Slab One", serif;
     --header-font-2: "Bebas Neue", sans-serif;
+    --font-cartoon: "Nerko One". serif;
 }
 
 *{
@@ -272,6 +272,7 @@ nav{
     margin-inline: auto;
     margin-bottom: 2rem;
     filter: drop-shadow(10px 10px 30px rgba(0, 0, 0, 0.3));
+    border-radius: 10px;
 }
 
 .order-card h4{
@@ -510,6 +511,23 @@ nav{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+.menu-sections {
+    font-family: var(--header-font-2);
+    grid-column: 1 / -1;
+    grid-row: auto;
+    display: flex;
+    background-color: var(--secondary-color);
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    width: calc(100% + 2rem);
+    margin-left: -1rem;
+    margin-right: -1rem; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    color: var(--primary-color);
+}
 
 @media (width > 540px) {
     .banner-container {

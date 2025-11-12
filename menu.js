@@ -114,7 +114,7 @@ ScrollReveal().reveal(".header-content h1", {
 
 ScrollReveal().reveal(".order-card", {
     ...scrollRevealOption,
-    interval: 320
+    interval: 120
 });
 
 ScrollReveal().reveal()("event-container", {
