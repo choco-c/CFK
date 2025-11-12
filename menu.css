@@ -421,7 +421,7 @@ nav{
     visibility: hidden;
     position: fixed;
     bottom: 50px;
-    right: 50px;
+    right: 75px;
     width: 50px;
     height: 50px;
     font-size: 2.5rem;
@@ -444,6 +444,72 @@ nav{
     border-color: #41464b;
     transition: 0.21s;
 }
+
+#music {
+    position: fixed;
+    bottom: 50px;
+    left: 75px;
+    width: 50px;
+    height: 50px;
+    font-size: 2rem;
+    border-radius: 25px;
+    background-color: var(--secondary-color);
+    color:var(--primary-color);
+    border-color: var(--text-dark);
+    border-width: 3px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#music:hover {
+    cursor: pointer;
+    background-color: rgb(221, 195, 166);
+    color:#855335;
+    border-color: #41464b;
+    transition: 0.21s;
+}
+
+.pick-song {
+    position: fixed;
+    bottom: 105px;
+    background-color:#79523a;
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    left: 20px;
+
+
+    opacity: 0;
+    transform: translateY(20px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.pick-song.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.pick-song:hover {
+    background-color:#8b664e;
+    transition: 0.25s;
+}
+
+.pick-song button {
+    cursor: pointer;
+    background-color: var(--secondary-color);
+    border-color: #212529;
+    border-radius: 4px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 
 @media (width > 540px) {
     .banner-container {
