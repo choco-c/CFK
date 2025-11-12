@@ -5,6 +5,24 @@ const menuBtnIcon = menuBtn.querySelector("i");
 const kittensong = new Audio("stuf/kitten beat.wav")
 kittensong.loop = true;
 
+const goup = document.getElementById("goup")
+
+
+window.addEventListener('scroll', () => {
+    if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+        goup.style.visibility = "visible"
+    } else {
+        goup.style.visibility = "hidden"
+    }
+})
+
+goup.addEventListener('click', () =>  {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    })
+});
+
 window.addEventListener('load', () => {
     kittensong.play();
 });
