@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Knewave&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap');
 :root{
     --primary-color:#693e23;
     --secondary-color:#d8a468;
@@ -98,8 +98,9 @@ nav{
     background-color: var(--primary-color);
 }
 
+/* CFK logo at top */
 .nav-logo img {
-    width: 250px;
+    width: 150px;
     max-width: 250px;
 }
 
@@ -184,8 +185,9 @@ nav{
     text-shadow: 2px 2px rgb(29, 14, 8);
 }
 
+/* i shit my pants */
 .header-content h1 span {
-    font-size: 3ch;
+    font-size: 2.5ch;
 }
 
 .banner-container {
@@ -541,6 +543,14 @@ nav{
     .order-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+        .nav-logo img {
+    width: 200px;
+    max-width: 250px;
+    }
+
+    .header-content h1 span {
+    font-size: 2.7ch;
+    }
 }
 
 @media (width > 768px) {
@@ -587,6 +597,15 @@ nav{
 
     .nav-links a {
         color: var(--white);
+    }
+
+    .nav-logo img {
+    width: 250px;
+    max-width: 250px;
+    }
+
+    .header-content h1 span {
+    font-size: 3.5ch;
     }
 
     .nav-links a:hover {
