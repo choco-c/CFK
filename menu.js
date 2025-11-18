@@ -99,6 +99,18 @@ const scrollRevealOption = {
     duration: 1000,
 };
 
+const gorgon = document.getElementById("gorgonimg")
+const gorgonaudio = new Audio("./stuf/idiotsamwich.mp3")
+
+function gordon() {
+    gorgon.style.display = "flex"
+
+    gorgonaudio.play()
+    setTimeout(() => {  
+        gorgon.style.display = "none"
+    }, 6769);
+}
+
 ScrollReveal().reveal(".header-image img", {
     ...scrollRevealOption,
     origin:"right",

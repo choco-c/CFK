@@ -17,6 +17,12 @@
     box-sizing: border-box;
 }
 
+#cfkname {
+    text-align: center;
+    color: wheat;
+    margin-top: 5px;
+}
+
 .section-container{
     max-width: var(--max-width);
     margin: auto;
@@ -207,6 +213,15 @@ nav{
 .banner-card:nth-child(1) {
     background-image: url(stuf/v913o7bo2g481\ 2.jpg);
     background-size: cover;
+    z-index: 11;
+    justify-content: flex-start;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner-card:nth-child(1):hover {
+    cursor: pointer;
 }
 
 .banner-card:nth-child(2) {
@@ -230,6 +245,17 @@ nav{
     font-size: 2rem;
     font-weight: 600;
     color: var(--white);
+}
+
+#gorgonimg {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    transition: 0.4s ease;
+    width: 400px;
+    height: 250px;
 }
 
 .order-container h3 {
@@ -628,6 +654,17 @@ nav{
 
     .header-content h1 {
         text-align: center;
+    }
+
+    #gorgonimg {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+        border-radius: 20px;
+        transition: 0.4s ease;
+        height: 650px;
+        width: 250px;
     }
 
     .banner-card {
