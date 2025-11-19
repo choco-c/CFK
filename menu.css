@@ -557,6 +557,14 @@ nav{
     color: var(--primary-color);
 }
 
+#srpc {
+    color: white;
+}
+
+#srpc:hover {
+    color: rgb(199, 199, 255);
+}
+
 @media (width > 540px) {
     .banner-container {
         grid-template-columns: repeat(2, 1fr);
