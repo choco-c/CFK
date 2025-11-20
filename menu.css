@@ -565,6 +565,124 @@ nav{
     color: rgb(199, 199, 255);
 }
 
+/* cfk chat */
+
+#chat {
+    bottom: 120px;
+    right: 70px;
+    position: fixed;
+}
+
+#chatbox {
+    background-color: rgb(255, 220, 175);
+    border:rgb(122, 71, 51) 6px solid;
+    border-radius: 5px;
+    width: 650px;
+    height: 150px;
+    display: none;
+    box-shadow: 15px 5px 5px rgba(12, 12, 12, 0.4)
+}
+
+.ri-close-line {
+    position: fixed;
+    cursor: pointer;
+    font-size: 1.9rem;
+}
+
+.ri-close-line:hover {
+    color: rgb(245, 65, 65);
+}
+
+#chatcharacter {
+    position: absolute;
+    width: 51%;
+    height: 92.5%;
+    background-color: white;
+    border: 3px rgb(255, 243, 204) solid;
+}
+
+#charimg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+#chatinput {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    height: 25px;
+    width: 150px;
+    border-radius: 12px;
+}
+
+#chatinput:focus {
+    border-color: hotpink;
+    outline: none;
+}
+
+#chatbtn {
+    width: 60px;
+    height: 60px;
+    border: solid 4px rgb(122, 71, 51);
+    border-radius: 50%;
+    background-color: rgb(255, 208, 146);
+    justify-content: center;
+    align-items: center;
+    display: inline-block;
+    margin-top: 90%;
+}
+
+#chatbtn:hover {
+    cursor: pointer;
+    border-color: rgb(143, 91, 71);
+    background-color: rgb(255, 220, 175);
+}
+
+.ri-chat-1-line {
+    font-size: 1.75rem;
+    color: rgb(122, 71, 51);
+}
+
+#chatchat {
+    display: flex;
+    box-sizing: border-box;
+    left: 51%;
+    position: absolute;
+    width: 48%;
+    height: 92.5%;
+    border: 3px rgb(255, 243, 204) solid;
+}
+
+.sentmsg {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    display:flex;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    height: 25px;
+    width: 155px;
+    border-radius: 12px;
+    border: 2px rgb(164, 197, 162) solid;
+}
+
+.aimsg {
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    position: absolute;
+    top: 45px;
+    right: 135px;
+    height: 25px;
+    width: 155px;
+    border-radius: 12px;
+    border: 2px rgb(197, 162, 162) solid;
+    font-size: 100%;
+}
+
 @media (width > 540px) {
     .banner-container {
         grid-template-columns: repeat(2, 1fr);
