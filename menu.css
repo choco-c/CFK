@@ -272,11 +272,11 @@ nav{
 
 #storyimg1 {
     margin-top: 15px;
-    height: 500px;
+    height: 200px;
 }
 #storyimg2 {
     margin-top: 15px;
-    height: 500px;
+    height: 200px;
 }
 
 .storytext {
@@ -290,7 +290,7 @@ nav{
     width: 50vw;
     background-color: #ffaaaa;
     border-radius: 6px;
-    font-size: 1.2rem;
+    font-size: 0.7rem;
 }
 
 #storylink {
@@ -840,6 +840,19 @@ nav{
 
     .header-content h1 span {
     font-size: 2.7ch;
+    }
+
+    #storyimg1 {
+    margin-top: 15px;
+    height: 500px;
+    }
+    #storyimg2 {
+        margin-top: 15px;
+        height: 500px;
+    }
+
+    .storytext {
+        font-size: 1.2rem;
     }
 }
 
