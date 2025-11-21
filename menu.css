@@ -116,6 +116,8 @@ nav{
     cursor: pointer;
 }
 
+/* home, special, menu etc. buttons at top of the page */
+
 .nav-links {
     position: absolute;
     top: 140px;
@@ -139,6 +141,7 @@ nav{
 }
 
 .nav-links a{
+    font-size: 1.35rem;
     font-weight: 600;
     white-space: nowrap;
     color: var(--white);
@@ -257,6 +260,47 @@ nav{
     width: 400px;
     height: 250px;
 }
+
+/* our story */
+
+#story {
+    border:dashed 5px var(--tertiary-color);
+    background-color: #ffffff;
+    padding: 15px;
+    display: flex;
+}
+
+#storyimg1 {
+    margin-top: 15px;
+    height: 500px;
+}
+#storyimg2 {
+    margin-top: 15px;
+    height: 500px;
+}
+
+.storytext {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #4D373C;
+    font-family: var(--header-font-1);
+    margin: 15px;
+    padding: 15px;
+    width: 50vw;
+    background-color: #ffaaaa;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+
+#storylink {
+    color: rgb(140, 145, 202);
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+/* menu */
+
 
 .order-container h3 {
     max-width: fit-content;
@@ -378,6 +422,9 @@ nav{
     display: none;
 }
 
+
+/* footer bottom of page */
+
 .footer {
     background-image: url(stuf/CFK\ logo2\ dark\ graybone\ pattern\ bg.png);
     background-position: center center;
@@ -393,6 +440,7 @@ nav{
     margin-top: 2rem;
     display: grid;
     gap: 2rem;
+    font-size: 1.6rem;
 }
 
 .footer-content p {
@@ -405,6 +453,7 @@ nav{
     list-style: none;
     display: grid;
     gap: 1rem;
+    margin-right: 150px;
 }
 
 .footer-links li{
@@ -420,8 +469,9 @@ nav{
 }
 
 .footer-socials {
+    margin-left: 50px;
     margin-top: 2rem;
-    display: flex;
+    display: block;
     align-items: center;
     gap: 1rem;
 }
@@ -445,6 +495,79 @@ nav{
 .event-image {
     max-width: 90vw;
 }
+
+/* faq section (not from tutorial) */
+
+#faq2 {
+    display: flex;
+    background-image: url(stuf/dark\ color.png);
+}
+
+#faq {
+    background-image: url(stuf/dark\ color.png);
+    background-size: cover;
+}
+
+#questions {
+    border: #000000 2px solid;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    display: block;
+    background-color: #21213f;
+    padding: 15px;
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.question h1 {
+    margin: 5px 0px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 2px;
+    color: white;
+    width: 75vw;
+}
+
+.question h3, a {
+    border-radius: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 6px 3px;
+    color: rgb(211, 211, 211);
+    width: 75vw;
+    font-size: 18px;
+}
+
+#questions-top {
+    border: #000000 2px solid;
+    border-bottom: 0px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 15px;
+    display: block;
+    height: 55px;
+    background-color: rgb(24, 18, 36);
+    padding: 15px;
+    border-radius: 15px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: left;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white;
+}
+
+#faqimg {
+    margin: 15px 0;
+    margin-right: 15px;
+    border: 2px black solid;
+    border-radius: 10px;
+}
+
+/* scroll to top button */
 
 #goup {
     visibility: hidden;
@@ -473,6 +596,8 @@ nav{
     border-color: #41464b;
     transition: 0.21s;
 }
+
+/* music menu */
 
 #music {
     position: fixed;
@@ -557,12 +682,24 @@ nav{
     color: var(--primary-color);
 }
 
-#srpc {
+/* important and gaming info at footer */
+
+.infotitle {
+    margin: 30px;
+    font-size: 1.55rem;
     color: white;
+    font-weight: 485;
 }
 
-#srpc:hover {
-    color: rgb(199, 199, 255);
+#srpc, #cg, #calclink {
+    margin: 30px;
+    font-size: 1.4rem;
+    color: rgb(181, 169, 223);
+}
+
+#srpc:hover, #cg:hover, #calclink:hover {
+    font-size: 1.45rem;
+    color: rgb(212, 212, 255);
 }
 
 /* cfk chat */
@@ -577,8 +714,8 @@ nav{
     background-color: rgb(255, 220, 175);
     border:rgb(122, 71, 51) 6px solid;
     border-radius: 5px;
-    width: 650px;
-    height: 150px;
+    width: 370px;
+    height: 250px;
     display: none;
     box-shadow: 15px 5px 5px rgba(12, 12, 12, 0.4)
 }
@@ -614,6 +751,7 @@ nav{
     height: 25px;
     width: 150px;
     border-radius: 12px;
+    text-align: center;
 }
 
 #chatinput:focus {
@@ -662,10 +800,10 @@ nav{
     position: absolute;
     top: 15px;
     right: 15px;
-    height: 25px;
-    width: 155px;
+    max-width: 255px;
     border-radius: 12px;
     border: 2px rgb(164, 197, 162) solid;
+    padding: 0 6px;
 }
 
 .aimsg {
@@ -674,13 +812,13 @@ nav{
     background-color: rgb(255, 255, 255);
     display: flex;
     position: absolute;
-    top: 45px;
-    right: 135px;
-    height: 25px;
-    width: 155px;
+    top: 75px;
+    right: 125px;
+    max-width: 255px;
     border-radius: 12px;
     border: 2px rgb(197, 162, 162) solid;
     font-size: 100%;
+    padding: 0 6px;
 }
 
 @media (width > 540px) {
@@ -791,6 +929,24 @@ nav{
         transition: 0.4s ease;
         height: 650px;
         width: 250px;
+    }
+
+    /* our story */
+
+    #storylink {
+        color: rgb(255, 255, 255);
+        font-size: 1rem;
+    }
+
+    #storylink:hover {
+        cursor: pointer;
+        font-size: 1.1rem;
+        color: rgb(140, 145, 202);
+        text-decoration: underline;
+    }
+
+    #chatbox {
+        width: 650px;
     }
 
     .banner-card {

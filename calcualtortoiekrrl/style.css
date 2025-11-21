@@ -1,0 +1,306 @@
+/* calc and body css */
+
+body{
+    margin: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(26, 26, 26);
+}
+
+
+#calculator {
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 230, 230);
+    border-radius: 25px;
+    max-width: 500px;
+    overflow: hidden;
+
+}
+
+#display {
+    width: 100%;
+    padding: 20px;
+    font-size: 5rem;
+    text-align: left;
+    border: none;
+    background-color: rgb(252, 207, 207);
+    color: rgb(255, 121, 121);
+}
+
+#keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 25px;
+}
+
+/* buttons css */
+
+button {
+    width: 100px;
+    height: 100px;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgb(172, 123, 123);
+    border-width: 4px;
+    background-color: rgb(14, 14, 14);
+    color: rgb(255, 121, 121);
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    visibility: visible;
+}
+
+button:hover {
+    background-color: rgb(71, 71, 71);
+}
+
+button:active {
+    background-color: rgb(102, 102, 102);
+    visibility: visible;
+}
+
+.operator-btn {
+    background-color: rgb(255, 202, 202);
+}
+
+.operator-btn:hover {
+    background-color: rgb(252, 222, 222);
+}
+
+.operator-btn:active {
+    background-color: rgb(238, 238, 255);
+}
+
+
+/* special buttons */
+
+#nuke {
+    background-image: url(cartoon-nuke-on-the-ground-bomb-3APrER4-600.jpg);
+    background-size: cover;
+}
+
+#nuke:hover {
+    filter: brightness(0.8);
+}
+
+#nuke:active {
+    filter: brightness(0.7);
+}
+
+#honk {
+    background-image: url(images.jpg);
+    background-size: cover;
+}
+
+#honk:hover {
+    filter: brightness(0.8);
+}
+
+#honk:active {
+    filter: brightness(0.7);
+}
+
+#scatterarea {
+    position: absolute;
+    background-color: black;
+    width: 1000px;
+    height: 250px;
+    bottom: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+
+#pi{
+    background-image: url(pieimg.jpg);
+    background-size: cover;
+}
+#pi:hover {
+    filter: brightness(0.8);
+}
+
+#pi:active {
+    filter: brightness(0.7);
+}
+
+
+#nut{
+    background-image: url(360_F_603865191_4LAzZO05Xogr0RQ3ag9F1BRA2CVcAO5M.jpg);
+    background-size: cover;
+}
+#nut:hover {
+    filter: brightness(0.8);
+}
+
+#nut:active {
+    filter: brightness(0.7);
+}
+
+#broom{
+    background-image: url(broom-illustration-white-background_1278800-23810.avif);
+    background-size: cover;
+}
+#broom:hover {
+    filter: brightness(0.8);
+}
+
+#broom:active {
+    filter: brightness(0.7);
+}
+
+#thanos{
+    background-image: url(178_GeoNews_07-333x600.jpg);
+    background-size: cover;
+}
+#thanos:hover {
+    filter: brightness(0.8);
+}
+
+#thanos:active {
+    filter: brightness(0.7);
+}
+
+#bread{
+    background-image: url(breadstreamimg.png);
+    background-size: cover;
+}
+#bread:hover {
+    filter: brightness(0.8);
+}
+
+#bread:active {
+    filter: brightness(0.7);
+}
+
+#beeps{
+    background-image: url(beepspfp.png);
+    background-size: cover;
+}
+#beeps:hover {
+    filter: brightness(0.8);
+}
+
+#beeps:active {
+    filter: brightness(0.7);
+}
+
+#beeps{
+    background-image: url(beepspfp.png);
+    background-size: cover;
+}
+#beeps:hover {
+    filter: brightness(0.8);
+}
+
+#beeps:active {
+    filter: brightness(0.7);
+}
+
+#beeps{
+    background-image: url(beepspfp.png);
+    background-size: cover;
+}
+#beeps:hover {
+    filter: brightness(0.8);
+}
+
+#beeps:active {
+    filter: brightness(0.7);
+}
+
+#boo{
+    font-size: 0.95rem;
+}
+#boo:hover {
+    filter: brightness(0.8);
+}
+
+#boo:active {
+    filter: brightness(0.7);
+}
+
+#fart{
+    background-image: url(fart-smelly-ezgif.com-optimize.gif);
+    background-size: cover;
+}
+#fart:hover {
+    filter: brightness(0.8);
+}
+
+#fart:active {
+    filter: brightness(0.7);
+}
+
+#stroop{
+    background-image: url(stroopwafel-from-above.webp);
+    background-size: cover;
+}
+#stroop:hover {
+    filter: brightness(0.8);
+}
+
+#stroop:active {
+    filter: brightness(0.7);
+}
+
+#mango{
+    background-image: url(qn73qvs6yh381.jpg);
+    background-size: cover;
+}
+#mango:hover {
+    filter: brightness(0.8);
+}
+
+#mango:active {
+    filter: brightness(0.7);
+}
+
+#mustard{
+    background-image: url(mustar.jpg);
+    background-size: cover;
+}
+#mustard:hover {
+    filter: brightness(0.8);
+}
+
+#mustard:active {
+    filter: brightness(0.7);
+}
+
+/* imgs/vids css */
+
+#nukevid {
+    visibility: hidden;
+    height: 100vh;
+    position: absolute;
+}
+
+#nutvid {
+    visibility: hidden;
+    position: fixed;
+}
+
+#nutimg {
+    visibility: hidden;
+    position: fixed;
+}
+
+#breadstreamimage {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+}
+
+#booo {
+    display: none;
+    position: absolute;
+}
+
+#boob {
+    display: none;
+    position: absolute;
+}

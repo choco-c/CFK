@@ -101,13 +101,16 @@ const scrollRevealOption = {
 
 const gorgon = document.getElementById("gorgonimg")
 const gorgonaudio = new Audio("./stuf/idiotsamwich.mp3")
+const gorgontext = document.getElementById("gorgontxt")
 
 function gordon() {
     gorgon.style.display = "flex"
+    gorgontext.style.display = "none"
 
     gorgonaudio.play()
     setTimeout(() => {  
         gorgon.style.display = "none"
+        gorgontext.style.display = "flex"
     }, 6769);
 }
 
@@ -133,55 +136,123 @@ ScrollReveal().reveal("event-container", {
     duration: 670
 });
 
+// defining chatbox button, box, input and the part where the msgs are put in
+
 const chatbtn = document.getElementById("chatbtn")
 const chatbox = document.getElementById("chatbox")
 const input = document.getElementById("chatinput")
 const chatc = document.getElementById("chatchat")
+
+//  defining audio files
+
+const boomp3 = document.getElementById('boo p.mp3')
+const ribombeemp3 = new Audio('stuf/ribombeePLEASEsurvive.mp3')
+
+// opens chatbox when chat button is clicked
 
 chatbtn.addEventListener('click', () => {
     chatbtn.style.display = "none",
     chatbox.style.display = "flex"
 })
 
+//  closes chatbox when x is clicked
+
 function closechat() {
     chatbtn.style.display = "flex",
     chatbox.style.display = "none"
 }
 
-msgai = false
+let msgexists = false
+
+// when Enter is clicked in the input, a random message is picked out of 50+ messages,
+// however for certain words and sentences there are dedicated responses
 
 input.addEventListener('keydown', (event) => {
+
+
     if (event.key === 'Enter') {
-        const sentmsg = document.createElement("p")
+
+    let yourmsg = input.value.toLowerCase()
+    
+
+        const oldsentmsg = chatbox.querySelector(".sentmsg")
+        if (oldsentmsg) oldsentmsg.remove()
+
+        const oldaimsg = chatbox.querySelector(".aimsg")
+        if (oldaimsg) oldaimsg.remove()
+
+        let sentmsg = document.createElement("p")
         sentmsg.classList.add("sentmsg")
+        sentmsg.innerHTML = ""
         sentmsg.innerHTML = input.value
         chatbox.appendChild(sentmsg)
 
         var idk = Math.floor((Math.random()) * 50)
         console.log(idk)
 
-
-
         if (input.value == "hello") {
             msgai = "hello to you too"
-        } else if (input.value == "what") {
+        } else if (yourmsg == "what") {
             msgai = "wdym 'what'?"
-        } else if (input.value == "ok") {
+        } else if (yourmsg == "ok") {
             msgai = "ok ok ok ok ok"
-        } else if (input.value == "bye") {
+        } else if (yourmsg == "bye") {
             msgai = "NOOOO DONT LEAVE"
-        } else if (input.value == "why") {
+        } else if (yourmsg == "why") {
             msgai = "why? because"
-        } else if (input.value == "fuck you") {
+        } else if (yourmsg == "fuck you") {
             msgai = "no fuck you"
-        } else if (input.value == "yes") {
+        } else if (yourmsg == "yes") {
             msgai = "no."
-        } else if (input.value == "no") {
+        } else if (yourmsg == "no") {
             msgai = "yes."
-        } else if (input.value == "hi") {
+        } else if (yourmsg == "hi") {
             msgai = "hi im going to "
-        } else if (input.value == "what") {
-            msgai = "wdym 'what'?"
+        } else if (yourmsg == "wha") {
+            msgai = "wha"
+        } else if (yourmsg == "uwu") {
+            msgai = "uwu~"
+        } else if (yourmsg == "owo") {
+            msgai = "meow! owo"
+        } else if (yourmsg == "nya") {
+            msgai = "nya :3"
+        } else if (yourmsg.includes('ribombee')) {
+            setTimeout(() => {  
+                ribombeemp3.play()
+            }, 2100);
+            msgai = "ribombee PLEASEE survive PLEASEEE"
+        } else if (yourmsg == "sex") {
+            msgai = "no id rather not with you"
+        } else if (yourmsg == "are you a furry" ||input.value == "are you a furry?") {
+            msgai = "am I a fuwwy? mwaybe"
+        } else if (yourmsg == "i hate you") {
+            msgai = "i hate you too pookie"
+        } else if (yourmsg == "idk") {
+            msgai = "you're too stupid to know?"
+        } else if (yourmsg == "fuck off") {
+            msgai = "no you fuck off"
+        } else if (yourmsg == "sorry" || input.value == "im sorry" || input.value == "i apologize" || input.value == "my apologies") {
+            msgai = "apology not accepted"
+        } else if (yourmsg.includes("vpx")) {
+            msgai = "fuck vpx i hope he explodes"
+        } else if (yourmsg.includes("mister rap is alive")) {
+            msgai = "🤫"
+        } else if (yourmsg == "") {
+            msgai = ""
+        } else if (yourmsg == "i love you") {
+            msgai = "ew stop loving me"
+        } else if (yourmsg == "die") {
+            msgai = "but i cant die"
+        } else if (yourmsg == "greg") {
+            msgai = "greg is real greg is life"
+        } else if (yourmsg.includes('cfk')) {
+            msgai = "if youre asking where to order cfk, you cant, also cfk stands for Choco's Fried Kitten if ur asking"
+        } else if (yourmsg == "i shit my pants") {
+            msgai = "yo i also shit my pants no way lmao lol rofl"
+        } else if (yourmsg.includes("mushypolter") || yourmsg.includes("mushy") || yourmsg.includes("polter")) {
+            msgai = "subscribe to MushyPolter youtube.com/@MushyPolter"
+        } else if (yourmsg.includes("silly red") && yourmsg.includes("album")){
+            msgai = "fuck you, it's never coming out"
         } else if (idk == 0) {
             msgai = "Fuck you"
         } else if (idk == 1) {
@@ -251,6 +322,9 @@ input.addEventListener('keydown', (event) => {
         } else if (idk == 33) {
             msgai = "Stay hydrated!"
         } else if (idk == 34) {
+            setTimeout(() => {  
+                ribombeemp3.play()
+            }, 2100);
             msgai = "Ribombee PLEASEEE survive"
         } else if (idk == 35) {
             msgai = "hi"
@@ -279,7 +353,30 @@ input.addEventListener('keydown', (event) => {
         } else if (idk == 47) {
             msgai = "what is wrong with you"
         } else if (idk == 48) {
+            setTimeout(() => {
+                msgai = "boo"
+            }, 2100);
+            boomp3.play()
+        } else if (idk == 49) {
+            msgai = "that made my cry"
+        } else if (idk == 50) {
+            msgai = "im deaduzz glorking it rn ong"
+        } else if (idk == 51) {
             msgai = "oh"
+        } else if (idk == 52) {
+            msgai = "do you even bust?"
+        } else if (idk == 53) {
+            msgai = "sorry"
+        } else if (idk == 54) {
+            msgai = "https://www.youtube.com/@MushyPolter/videos"
+        } else if (idk == 55) {
+            msgai = "subscribe to MushyPolter"
+        } else if (idk == 56) {
+            msgai = "GET OUT OF MY HEAD MAN"
+        } else if (idk == 57) {
+            msgai = "stop"
+        } else if (idk == 58) {
+            msgai = "grr"
         } else {
             msgai = "no"
         }
@@ -287,11 +384,16 @@ input.addEventListener('keydown', (event) => {
         input.value = ""
 
         setTimeout(() => {
-            const aimsg = document.createElement("p")
+            reply()
+        }, 2100);
+
+        function reply() {
+            let aimsg = document.createElement("p")
             aimsg.classList.add("aimsg")
+            aimsg.innerHTML = ""
             aimsg.innerHTML = msgai
             chatc.appendChild(aimsg)
             msgexists = true
-        }, 2100);
+        }
     }
 });

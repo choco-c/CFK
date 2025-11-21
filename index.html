@@ -33,9 +33,9 @@
                 <!-- menu for navigating the site quickly -->
                 <ul class="nav-links" id="nav-links">
                     <li><a href="#home">HOME</a></li>
-                    <li><a href="#special">SPECIAL</a></li>
+                    <li><a href="#story">OUR STORY</a></li>
                     <li><a href="#menu">MENU</a></li>
-                    <li><a href="#event">EVENT</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                     <li><a href="#contact">CONTACT US</a></li>
                 </ul>
             </nav>
@@ -57,7 +57,7 @@
             <div onclick="gordon()" class="banner-card">
                 <img src="stuf/gorgon aproves cfk.png" alt="gordonrasmey" id="gorgonimg">
                 <p>TRY IT NOW!!!</p>
-                <h4>APPROVED BY GORDON RASMEY</h4>
+                <h4 id="gorgontxt">APPROVED BY GORDON RASMEY</h4>
             </div>
             <div class="banner-card">
                 <p>TRY IT NOW!!!</p>
@@ -69,13 +69,34 @@
             </div>
         </section>
 
+        <!-- our story -->
+         <section class="our-story" id="story">
+            <div class="storytext">
+                <p>
+                    Welcome to CFK where we foster a safe environment for cat enjoyers around the globe!
+                    From our iconic Kitten Wings to our best-seller Kitten Burger, we truly have an option for all taste-pallets!
+                    <br>Don't wait any longer and order CFK now or go to the nearbiest CFK restaurant!
+                    <br><a id="storylink" href="os.html">Click here to learn more about our story!</a>
+                </p>
+                <img src="stuf/qdcm9j8106b31.jpg" id="storyimg1">
+            </div>
+            <div class="storytext">
+                <p>
+                    Our cats are humanely collected from animal shelters by our hard-working horses,
+                    they're then prepared by our top-of-the-line cat and human chefs so you can
+                    enjoy the delicious world of CFK!
+                    <br>Our restaurant is approved by Gordon Rasmey (not to be confused by Ramsey) and was rated great/5 stars by a food inspector
+                </p>
+                <img src="stuf/cat collecting horse.png" id="storyimg2">
+            </div>
+            
+        </section>
+
+
         <!-- the beloved menu -->
         <section class="section-container order-container" id="menu">
             <h3>ALWAYS DELICIUOUS</h3>
-            <h2 class="section-header">BUY NOW BUY NOW BUY NOW.</h2>
-            <p class="section description">
-                words words words
-            </p>
+            <h2 class="section-header">BUY NOW BUY NOW BUY NOW</h2>
             <div class="order-grid">
 
                 <!-- fried -->
@@ -92,7 +113,7 @@
                 </div>
                 <div class="order-card">
                     <img src="stuf/kiten strip.jpg" alt="order">
-                    <h4>Kitten Strip</h4>
+                    <h4>Kitten Strips</h4>
                     <p>
                         2 kiten stips with our signature seasoning (air)
                     </p>
@@ -364,11 +385,46 @@
                     <button class="btn" type="submit">SUBMIT</button>
                 </form>
                 <br/>
-                <p style="text-align: center; color: rgb(255, 87, 87);font-size: 2rem;text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8); font-weight: bold;">
+                <p style="text-align: center; color: rgb(255, 0, 0);font-size: 2rem;text-shadow: 5px 5px 20px rgba(0, 0, 0, 0.8); font-weight: bold;">
                     dont fill in your actual info cuz I WILL see it</p>
             </div>
         </section>
 
+        <!-- faq section -->
+    <div id="faq2">
+        <div id="faq">
+            <div id="questions-top">Commonly Asked Questions</div>
+
+            <div id="questions">
+                <div class="question">
+                    <h1>Q: Where can I order CFK?</h1>
+                    <h3>A: Nowhere.</h3>
+                </div>
+
+                <div class="question">
+                    <h1>Q: Who should I subscribe to?</h1>
+                    <h3><a href="https://youtube.com/@MushyPolter">A: MushyPolter.</a></h3>
+                </div>
+
+                <div class="question">
+                    <h1>Q: Who is the stupidest person to ever live?</h1>
+                    <h3>A: Vpx</h3>
+                </div>
+
+                <div class="question">
+                    <h1>Q: Does this website have ai generated images or text?</h1>
+                    <h3>A: No</h3>
+                </div>
+
+                <div class="question">
+                    <h1>Q: What is the meaning of life, the universe and everything?</h1>
+                    <h3>A: 42</h3>
+                </div>
+
+            </div>
+        </div>
+        <img src="stuf/notadog thumb up wide.png" id="faqimg">
+    </div>
         <!-- bottom info section -->
         <footer class="footer">
             <div class="section-container footer-container">
@@ -376,13 +432,19 @@
                     <img src="stuf/CFK logo2 no no bg.png" alt="logo"/>
                 </div>
                 <div class="footer-content">
+
+
                     <p>
-                        Welcome to CFK where we foster a safe environment for cat enjoyers around the globe!
-                        From our iconic Kitten Wings to our best-seller Kitten Burger, we truly have an option for all taste-pallets!
-                        Don't wait any longer and order CFK now or go to the nearbiest CFK restaurant!
                         <span style="color: rgb(239, 255, 239);">No AI images or AI generated text is used in this website.</span>
                     </p>
-                    <div>
+                    </div>
+                        <p class="infotitle">Important:</p>
+                        <a href="cg.html" id="cg">Community Guidelines</a>
+                        <p class="infotitle">Games:</p>
+                        <br><a href="PiedraPapelTijera/ppt.html" id="srpc">Spanish rock paper and scissors</a><br>
+                        <br><a href="calcualtortoiekrrl/calc.html" id="calclink">Calculator but with weird buttons</a>
+                    </div>
+                <div>
                         <ul class="footer-links">
                             <li>
                                 <span><i class="ri-map-pin-2-fill"></i></span>
@@ -394,14 +456,11 @@
                             </li>
                         </ul>
                         <div class="footer-socials">
-                            <a href="#"><i class="ri-youtube-fill"></i></a>
+                            <a href="https://www.youtube.com/@Choco-u8y"><i class="ri-youtube-fill"></i></a>
                             <a href="#"><i class="ri-snapchat-fill"></i></a>
                             <a href="#"><i class="ri-twitter-fill"></i></a>
                             <a href="#"><i class="ri-reddit-fill"></i></a>
                         </div>
-                            <a href="PiedraPapelTijera/ppt.html" id="srpc">spanish rock paper and scissors</a>
-                    </div>
-                </div>
                 <div class="footer-bar">
                     Copyright (c) 2028 Choco. All lefts reserved.
                 </div>
@@ -423,10 +482,10 @@
         <div id="back">
             <div id="chat">
                 <div id="chatbox">       
-                    <div id="chatcharacter"><img src="stuf/character.jpg" id="charimg"></div>
+                    <div id="chatcharacter"><img src="stuf/CFK mascot - notadog.png" id="charimg"></div>
                     <span onclick="closechat()"><i class="ri-close-line"></i></span>
                     <div id="chatchat"></div>
-                    <input type="text" id="chatinput">
+                    <input type="text" id="chatinput" placeholder="say anything">
                 </div>
             
                 <button id="chatbtn"><i class="ri-chat-1-line"></i></button>

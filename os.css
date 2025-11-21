@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Knewave&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap');
+
+:root{
+    --primary-color:#75432c;
+    --secondary-color:#ffca8d;
+    --tertiary-color:#ffb8b8;
+    --text-dark: #212529;
+    --header-font-1: "Alfa Slab One", serif;
+    --header-font-2: "Bebas Neue", sans-serif;
+    --font-cartoon: "Nerko One". serif;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color: var(--secondary-color);
+}
+
+.header {
+    background-color:var(--primary-color) ;
+    color: var(--secondary-color);
+    padding: 25px;
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 740;
+    font-family: var(--header-font-2);
+    border-bottom-left-radius: 22px;
+    border-bottom-right-radius: 22px;
+}
+
+#stories {
+    font-size: 1.3rem;
+    color: #4D373C;
+    margin: 50px;
+    background-color: var(--tertiary-color);
+    padding: 15px;
+    border-radius: 10px;
+    border: dashed #4D373C 4px;
+}
+
+.storyp, a {
+    color: #5d4b6b;
+}
+
+.storyp, a:hover {
+    color: #585d8a;
+    font-size: 1.315rem;
+    transition: 0.25s ease;
+}
+
+/* bottom of page stuff */
+
+/* important and games info */
+
+.infotitle {
+    margin: 30px;
+    font-size: 1.55rem;
+    color: white;
+    font-weight: 485;
+}
+
+#srpc, #cg, #calclink {
+    margin: 30px;
+    font-size: 1.4rem;
+    color: rgb(181, 169, 223);
+}
+
+#srpc:hover, #cg:hover, #calclink:hover {
+    font-size: 1.45rem;
+    color: rgb(212, 212, 255);
+}
+
+
+/* the footer div and background */
+
+.footer {
+    background-image: url(stuf/CFK\ logo2\ dark\ graybone\ pattern\ bg.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* the logo in the footer */
+
+.footer-logo img {
+    max-width: 250px;
+}
+
+/* the text saying no ai used */
+
+.footer-content {
+    margin: 30px;
+    margin-top: 2rem;
+    display: grid;
+    gap: 2rem;
+    font-size: 1.6rem;
+}
+
+.footer-content p {
+    font-weight: 5500;
+    color: white;
+    line-height: 1.75rem;
+}
+
+/* the location and email things */
+
+.footer-links {
+    list-style: none;
+    display: grid;
+    gap: 1rem;
+    margin-right: 150px;
+}
+
+
+.footer-links li{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-weight: 500;
+    color: white;
+}
+
+.footer-links li span {
+    font-size:  1.25rex;
+}
+
+/* the div for the social media icons */
+
+.footer-socials {
+    margin: 30px;
+    margin-top: 2rem;
+    display: block;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* social media icons */
+
+.footer-socials a{
+    margin: 5px;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.footer-socials a:hover {
+    color: var(--secondary-color);
+}
+
+.footer-bar {
+    padding: 1rem;
+    font-size: 1rem;
+    color: white;
+    text-align: center;
+}
+
+.footer-content{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.footer-links li{
+    justify-content: flex-end;
+}
+
+.footer-socials{
+    justify-content: flex-end;
+}
