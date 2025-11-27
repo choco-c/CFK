@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CFK</title>
         <link rel="stylesheet" href="menu.css"/>
+        <link rel="stylesheet" href="3d.css">
         <link
             href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
             rel="stylesheet"/>
@@ -217,6 +218,7 @@
                         <img src="stuf/purrito1.jpg" alt="order">
                         <h4>Purrito</h4>
                         <p>This delicious small purrito is a great side to any meal! Great for kids and adults alike</p>
+                        <button class="btn">MORE INFO</button>
                     </div>
                 </div>
                 <div>
@@ -224,6 +226,15 @@
                         <img src="stuf/IMG_2394.png" alt="order">
                         <h4>Used Cat</h4>
                         <p>Someone already took a bite out of it but just like eat around it</p>
+                        <button class="btn">MORE INFO</button>
+                    </div>
+                </div>
+                <div>
+                    <div class="order-card">
+                        <img src="stuf/tacocat.jpg" alt="order">
+                        <h4>tacocat</h4>
+                        <p>The cutest palindrome! Also exists in the best card game ever 'Exploding Kittens'</p>
+                        <button class="btn">MORE INFO</button>
                     </div>
                 </div>
 
@@ -315,14 +326,23 @@
                     <img src="stuf/catpucino.jpg" alt="order">
                     <h4>Catpuccino</h4>
                     <p>
-                        
+                        This irrestitable catpuccino is sure to wake you up in the morning! 
                     </p>
                     <button class="btn">MORE INFO</button>
                 </div>
                 <div class="order-card">
                     <img src="stuf/chocolat catshake.jpg" alt="order">
-                    <h4>Chocolate </h4>
+                    <h4>Chocolate Kitshake</h4>
                     <p>
+                        People say cat's can't eat chocolate, but that doesn't mean you can't mix them with it and drink it!
+                    </p>
+                    <button class="btn">MORE INFO</button>
+                </div>
+                <div class="order-card">
+                    <img src="stuf/forbidden-glass-of-melt-cup-of-cat-v0-jre6yti9lkde1.webp" alt="order">
+                    <h4>Kilk</h4>
+                    <p>
+                        Cat milk but not for babies this is just normal cat milk
                     </p>
                     <button class="btn">MORE INFO</button>
                 </div>
@@ -363,7 +383,8 @@
                         AAAAAAAAAAAAAAAAAAAAAAAAAAAAA
                         AAAAAAAAAAAAAAAAAAAAAAAAAAA
                         AAAAAAAAAAAAAAAAAAAAAAAAAAAA
-                        AAAAAAAAAAAAAAAAAAAAAAAAAA
+                        AAAAAAAAAAAAAAAAAAAAAAAAAA <br>
+                        idk we dont have events
                     </p>
                 </div>
             </div>
@@ -425,6 +446,35 @@
         </div>
         <img src="stuf/notadog thumb up wide.png" id="faqimg">
     </div>
+
+    <!-- slider, with seperate css file and body -->
+    <div class="body3d">
+
+        <div class="banner3d">
+            <div class="slider" style="--quantity: 10">
+                <div class="item3d" style="--position: 1"><img src="stuf/chef.webp" draggable="false"></div>
+                <div class="item3d" style="--position: 2"><img src="stuf/jonahglitchspinkrita-ezgif.com-video-to-gif-converter.gif" draggable="false"></div>
+                <div class="item3d" style="--position: 3"><img src="stuf/9c0cfb9e0cde509bbbd5a36b6ad050c6-Photoroom.png" draggable="false"></div>
+                <div class="item3d" style="--position: 4"><img src="stuf/360_F_603865191_4LAzZO05Xogr0RQ3ag9F1BRA2CVcAO5M.jpg" draggable="false"></div>
+                <div class="item3d" style="--position: 5"><img src="stuf/360_F_873238147_usRuwjvWJshRQXZ0CW8EOuOnp1cXwcJK.jpg" draggable="false"></div>
+                <div class="item3d" style="--position: 6"><img src="stuf/hog.jpg" draggable="false"></div>
+                <div class="item3d" style="--position: 7"><img src="stuf/kiten strip.jpg" draggable="false"></div>
+                <div class="item3d" style="--position: 8"><img src="stuf/mustar.jpg" draggable="false"></div>
+                <div class="item3d" style="--position: 9"><img src="stuf/pezwatergrouptop_600x.webp" draggable="false"></div>
+                <div class="item3d" style="--position: 10"><img src="stuf/718vThl3v+L._AC_SX679_.jpg" draggable="false"></div>
+            </div>
+        </div>
+
+        <div class="buttons3d">
+            <button class="button3d" onclick="right()"><--</button>
+            <button class="button3d" onclick="spinnywee()">wee</button>
+            <button class="button3d" onclick="left()">--></button>
+        </div>
+    </div>
+
+
+
+
         <!-- bottom info section -->
         <footer class="footer">
             <div class="section-container footer-container">
@@ -447,8 +497,7 @@
                     </div>
                     <div class="tests">
                         <p class="infotitle">Experimental:</p>
-                        <a href="3d slider/3d.html" id="slider">Slider</a><br>
-                        <br><a href="login/login.html" id="login">Accounts (not functional)</a>
+                        <a href="login/login.html" id="login">Accounts (not functional)</a>
                     </div>
                 <div>
                         <ul class="footer-links">

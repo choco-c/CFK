@@ -28,7 +28,23 @@ body {
     border-bottom-right-radius: 22px;
 }
 
-#stories {
+#osreturn {
+    font-weight: bold;
+    background-color:var(--secondary-color) ;
+    color: var(--primary-color);
+    border: rgb(83, 52, 40) 2px solid;
+    border-radius: 5px;
+    position: absolute;
+    margin: 25px;
+    width: 60px;
+    height: 35px;
+}
+
+#osreturn:hover {
+    cursor: pointer;
+}
+
+.stories {
     font-size: 1.3rem;
     color: #4D373C;
     margin: 50px;
@@ -48,6 +64,13 @@ body {
     transition: 0.25s ease;
 }
 
+.storypimg {
+    margin: 15px 5px;
+    height: 500px;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
 /* bottom of page stuff */
 
 /* important and games info */
@@ -60,6 +83,7 @@ body {
 }
 
 #srpc, #cg, #calclink {
+    text-decoration: none;
     margin: 30px;
     font-size: 1.4rem;
     color: rgb(181, 169, 223);
@@ -137,6 +161,7 @@ body {
 /* social media icons */
 
 .footer-socials a{
+    text-decoration: none;
     margin: 5px;
     font-size: 1.5rem;
     color: white;

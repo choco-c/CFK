@@ -216,7 +216,6 @@ nav{
 .banner-card:nth-child(1) {
     background-image: url(stuf/v913o7bo2g481\ 2.jpg);
     background-size: cover;
-    z-index: 11;
     justify-content: flex-start;
     align-items: flex-start;
     display: flex;
