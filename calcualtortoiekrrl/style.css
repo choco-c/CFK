@@ -269,6 +269,19 @@ button:active {
     filter: brightness(0.7);
 }
 
+#uhh{
+    background-image: url(tenue.gif);
+    background-size: cover;
+}
+#uhh:hover {
+    filter: brightness(0.8);
+}
+
+#uhh:active {
+    filter: brightness(0.7);
+}
+
+
 /* imgs/vids css */
 
 #nukevid {
@@ -307,6 +320,13 @@ button:active {
     position: absolute;
 }
 
+#uhhimg {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    display: flex;
+    visibility: hidden;
+}
 
 
 

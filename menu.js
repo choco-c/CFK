@@ -253,6 +253,12 @@ input.addEventListener('keydown', (event) => {
             msgai = "subscribe to MushyPolter youtube.com/@MushyPolter"
         } else if (yourmsg.includes("silly red") && yourmsg.includes("album")){
             msgai = "fuck you, it's never coming out"
+        } else if (yourmsg.includes("ebo")){
+            msgai = "ebo"
+        } else if (yourmsg.includes("robux")){
+            msgai = "free robux??"
+        } else if (yourmsg.includes("vbucks")){
+            msgai = "free vbucks???"
         } else if (idk == 0) {
             msgai = "Fuck you"
         } else if (idk == 1) {

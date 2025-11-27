@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="login.css">
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+
+    <title>Login</title>
+
+</head>
+<body>
+    
+    <div class="wrapper">
+
+        <div class="form-box login">
+            <h2>Login</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><i class="ri-mail-line"></i></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="ri-key-fill"></i></span>
+                        <input type="password" required maxlength="32" pattern="/S+">
+                        <label>Password</label>
+                    </div>
+                    <div class="rember-forgor">
+                        <label for=""><input type="checkbox">
+                        Rember me</label>
+                        <a href="forgor.html">Forgor Passwor</a>
+                    </div>
+                    <button type="submit" class="btn">Log in</button>
+                    <div class="login-register">
+                        <p>You no have account? <a href="#" class="register-link">Register</a></p>
+                    </div>
+                </form>
+        </div>
+
+        <div class="form-box register">
+            <h2>Register</h2>
+                <form action="#">
+                    <div class="input-box">
+                        <span class="icon"><i class="ri-mail-line"></i></span>
+                        <input type="email" required>
+                        <label>Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="ri-user-3-fill"></i></span>
+                        <input type="text" required maxlength="32" pattern="/S+">
+                        <label>Username</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class="ri-key-fill"></i></span>
+                        <input type="password" required maxlength="32" pattern="/S+">
+                        <label>Password</label>
+                    </div>
+                    <div class="rember-forgor">
+                        <label for=""><input type="checkbox">
+                        I agree to hand over my firstborn child</label>
+                    </div>
+                    <button type="submit" class="btn">Log in</button>
+                    <div class="login-register">
+                        <p>You alredy have account? <a href="#" class="login-link">Login</a></p>
+                    </div>
+                </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>

@@ -691,13 +691,20 @@ nav{
     font-weight: 485;
 }
 
-#srpc, #cg, #calclink {
+.tests {
+    margin: 30px;
+    font-size: 1.55rem;
+    color: white;
+    font-weight: 485;
+}
+
+#srpc, #cg, #calclink, #login, #slider {
     margin: 30px;
     font-size: 1.4rem;
     color: rgb(181, 169, 223);
 }
 
-#srpc:hover, #cg:hover, #calclink:hover {
+#srpc:hover, #cg:hover, #calclink:hover, #login:hover, #slider:hover {
     font-size: 1.45rem;
     color: rgb(212, 212, 255);
 }

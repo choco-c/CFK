@@ -240,8 +240,21 @@ function fart() {
 
 // 
 
-const stroopimg = document.getElementById()
 
 function stroop() {
 
+}
+
+const uhhmp3 = new Audio('caedncylands.mp3')
+const uhhbutton = document.getElementById("uhh")
+const uhhimg = document.getElementById("uhhimg")
+
+function uhh() {
+    uhhmp3.play()
+
+    uhhbutton.style.disabled = "true"
+    uhhimg.style.visibility = "visible"
+    uhhimg.style.transition = "300s"
+    uhhimg.style.width = "1250px"
+    uhhimg.style.height = "1250px"
 }
