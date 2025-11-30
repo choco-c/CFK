@@ -426,3 +426,13 @@ function spinnywee() {
     rotation += spinamount
     slider.style.transform = `perspective(1000px) rotateY(${rotation}deg)`
 }
+
+const moreinfodiv = document.querySelector(".moreinfo")
+
+function moreinfo(element) {
+    element.parentNode.querySelector(".moreinfo").style.display = "block"
+}
+
+function infox(elem) {
+    elem.parentNode.style.display = "none"
+}

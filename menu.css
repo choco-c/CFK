@@ -360,6 +360,58 @@ nav{
     line-height: 1.75rem;
 }
 
+.moreinfo {
+    z-index: 2;
+    background-color: var(--tertiary-color);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    border-radius: 1rem;
+    display: none;
+}
+
+.moreinfo:hover {
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.moreinfo img {
+    width: 30%;
+    margin: 20px;
+}
+
+.moreinfo h1 {
+    position: absolute;
+    font-weight: bold;
+    font-size: 2rem;
+    top: 18%;
+    left: 45%;
+}
+
+.moreinfo i {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.moreinfo p {
+    text-align: left;
+    border-radius: 0.5rem;
+    margin: 0px 20px;
+    background-color: rgb(255, 230, 230);
+    padding-inline: 5px;
+    font-size: 0.85rem;
+    line-height: 20px;
+}
+
+.moreinfo p span {
+    font-size: 1.15rem;
+    font-weight: bold;
+}
+
 .event-content {
     display: grid;
     gap: 2rem;
