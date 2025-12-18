@@ -10,10 +10,12 @@ const kittensong = new Audio("stuf/kitten beat.wav")
 kittensong.loop = true;
 const sillysong = new Audio("stuf/Fried Kitten Ballad.mp3")
 sillysong.loop = true;
+const meowzers1 = new Audio("stuf/meowzers1.mp3")
 
 //defines the music popup menu buttons
 const option1 = document.getElementById("option1")
 const option2 = document.getElementById("option2")
+const option3 = document.getElementById("option3")
 const mute = document.getElementById("mute")
 
 //defines the music menu button and music popup div and creates a variable for if the popup is visible
@@ -21,26 +23,47 @@ const musicbtn = document.getElementById("music")
 const popup = document.getElementById("msc-popup")
 var vis = false
 
-//plays/resets kittensong and pauses sillysong if it was playing
+//plays/resets kittensong and pauses the other songs
 option1.addEventListener('click', () => {
     kittensong.currentTime = 0;
     sillysong.pause();
+
+    meowzers1.currentTime = 0;
+    meowzers1.pause()
+
     sillysong.currentTime = 0;
     kittensong.play();
 });
 
-//plays/resets sillysong and pauses kittensong if it was playing
+//plays/resets sillysong and pauses the other songs
 option2.addEventListener('click', () => {
     sillysong.currentTime = 0;
     kittensong.pause();
+    
+    meowzers1.currentTime = 0;
+    meowzers1.pause()
+
     kittensong.currentTime = 0;
     sillysong.play();
+});
+
+//plays/resets my song called meowzers and pauses the other songs
+option3.addEventListener('click', () => {
+    sillysong.currentTime = 0;
+    kittensong.pause();
+
+    kittensong.currentTime = 0;
+    sillysong.pause();
+
+    meowzers1.currentTime = 0;
+    meowzers1.play()
 });
 
 //mutes any playing song
 mute.addEventListener('click', () => {
     kittensong.pause();
     sillysong.pause();
+    meowzers1.play()
 });
 
 //toggles between if the popup is visible or not
@@ -127,10 +150,10 @@ ScrollReveal().reveal(".header-content h1", {
     delay: 780,
 });
 
-ScrollReveal().reveal(".order-card", {
-    ...scrollRevealOption,
-    interval: 120
-});
+// ScrollReveal().reveal(".order-card", {
+//     ...scrollRevealOption,
+//     interval: 120
+// });
 
 ScrollReveal().reveal("event-container", {
     duration: 670
@@ -150,9 +173,24 @@ const ribombeemp3 = new Audio('stuf/ribombeePLEASEsurvive.mp3')
 
 // opens chatbox when chat button is clicked
 
+let nobodyheretohelpyou = false
+
 chatbtn.addEventListener('click', () => {
-    chatbtn.style.display = "none",
-    chatbox.style.display = "flex"
+    console.log(nobodyheretohelpyou)
+    if (nobodyheretohelpyou == false) {
+        chatbtn.style.display = "none",
+        chatbox.style.display = "flex"
+    } else {
+        chatbtn.innerHTML = "nobody here to help you now."
+        chatbtn.style.backgroundColor = "red",
+        chatbtn.style.fontSize = "0.7rem"
+        chatbtn.style.color = "black"
+        chatbtn.style.borderColor = "rgb(200, 0, 0)"
+
+        setTimeout(() => {
+            chatbtn.display = "none"
+        }, 2000);
+    }
 })
 
 //  closes chatbox when x is clicked
@@ -435,4 +473,150 @@ function moreinfo(element) {
 
 function infox(elem) {
     elem.parentNode.style.display = "none"
+}
+
+const schrodinger1 = document.getElementById("schrodinger1")
+const schrodinger2 = document.getElementById("schrodinger2")
+let schrodingcounter = 0
+
+function schrodinger() {
+    setInterval(() => {
+        schrodingcounter++
+        if (schrodingcounter % 2 == 0) {
+            schrodinger1.classList.add("hide2")
+            schrodinger2.classList.remove("hide2")
+        } else {
+            schrodinger1.classList.remove("hide2")
+            schrodinger2.classList.add("hide2")
+        }
+    }, 250);
+}
+
+schrodinger()
+
+// gets all mipi elements to show when show more is clicked
+const mipis = document.getElementsByClassName("mipi")
+
+// removes the .hide class from all mipi elements, showing them, and starts mipitosis
+function mipi() {
+    Array.from(mipis).forEach(div => {
+        div.classList.toggle("hide")
+    })
+    mipitosis()
+}
+
+// defining stuff necesarry for the mipitosis function
+const ordergrid = document.querySelector(".order-grid")
+const mipicard = document.querySelector(".order-card.mipi")
+const hidebtn = document.getElementById("hidebtn")
+const twentyeightdayslatertheme = new Audio("stuf/28DaysTheme.mp3")
+const bannercards = document.getElementsByClassName("banner-card")
+
+// defines mipiTimeout and startTimeout so hide() can clear it outside the mipitosis function
+let mipiTimeout
+let startTimeout
+
+// spreads the mipi virus..
+function mipitosis() {
+    
+    // defines original interval
+    let mipiinterval = 6000
+    // this variable will increase by 1 each time and the code will check if it is disivible by 4, only running it once every 4 times
+    let imgcounter = 0;
+    // if youre reading this you should watch 28 Days Later its pretty good, and its 2 sequels
+    twentyeightdayslatertheme.play()
+
+    // does some stuff to improve the mipi infection experiecnce at the start
+    startTimeout = setTimeout(() => {
+        // when this is true, clicking the cfk-bot button will make it red and show scawy text
+        nobodyheretohelpyou = true
+
+        // this hides some buttons and replaces the banner-card images with mipi since those use background-image in css
+        hidebtn.style.display = "none"
+        goup.style.display = "none"
+        musicbtn.style.display = "none"
+        chatbox.style.display = "none"
+        Array.from(bannercards).forEach(div => {
+            div.classList.toggle("mipibg")
+        })
+    }, 6000);
+
+    // this is where the magic happens, every 'mipiinterval' amount of time it adds a mipi to the mipi section, replaces a menu item with mipi, randomly inserts a mipi somewhere, and replaces a random non-menu img with mipi
+    function clonemipi() {
+
+        // defines all mipicards every time the function runs
+        let mipicards = document.querySelectorAll(".order-card.mipi")
+        let nonmipiimgs
+
+        // creates clone out of the original mipicard
+        const clone = mipicard.cloneNode(true);
+        ordergrid.appendChild(clone);
+
+        // defines non-mipi menu items, and filters any potential menu items who's parent div is not the ordergrid so the ordergrid.insertBefore doesn't get an error
+        let notmipicards = Array.from(document.querySelectorAll(".order-card:not(.mipi)"))
+        .filter(card => card.parentElement === ordergrid)
+
+        // replaces random menu item with mipi every 2 times
+        if (notmipicards.length > 0 && imgcounter % 2 == 0) {
+            console.log(`%cThere are ${notmipicards.length} menu item survivors left`, "color: limegreen")
+            const randomreplacenum = Math.floor(Math.random() * notmipicards.length)
+            const randomreplacecard = notmipicards[randomreplacenum]
+            const clone2 = mipicard.cloneNode(true)
+            randomreplacecard.replaceWith(clone2)
+        }
+
+        // gets all menu items
+        allcards = Array.from(document.querySelectorAll(".order-card"))
+        .filter(card => card.parentElement === ordergrid)
+
+        // takes a random menu item including mipi and adds another mipi
+        const randominsertnum = Math.floor(Math.random() * allcards.length)
+        const randominsertcard = allcards[randominsertnum]
+        const clone3 = mipicard.cloneNode(true)
+        ordergrid.insertBefore(clone3, randominsertcard)
+        
+        // adds 1 to the imgcounter
+        imgcounter++
+
+        // creates an array from all images, excluding things using css for a background-image
+        nonmipiimgs = Array.from(document.querySelectorAll("img"))
+        .filter(img => img.getAttribute("src") !== "stuf/mipi.webp" && !img.closest(".order-card"))
+
+        // every 4 times and if there are any non-mipi images left, this takes a random img and replaces the source with mipi.webp and shows in the console the amount of images left
+        if (nonmipiimgs.length > 0 && imgcounter % 4 == 0) {
+            console.log(`%c${nonmipiimgs.length} image survivors left`, "color: green")
+            const randomimgnum = Math.floor(Math.random() * nonmipiimgs.length)
+            const randomimg = nonmipiimgs[randomimgnum]
+            randomimg.src = "stuf/mipi.webp"
+        }
+
+        
+        //shows mipi amount and cloning speed in the console
+        console.log(`%cOne mipi is added every ${(mipiinterval) / 1000} seconds`, "color: orange")
+        console.log(`%cThere are ${mipicards.length} mipis`, "color: red")
+
+        // restarts the function and reduces the interval by .2s until reaching .4s
+        if (mipiinterval > 400) {
+            mipiinterval -= 200
+            mipiTimeout = setTimeout(clonemipi, mipiinterval)
+        } else {
+            mipiTimeout = setTimeout(clonemipi, 400)
+        }
+    }
+
+    // starts the function after mipiinterval amount of time, after this it repeats
+    mipiTimeout = setTimeout(clonemipi, mipiinterval)
+}
+
+// this clears the start- and mipiTimeout to prevent mipitosis, and ends and resets the music, when mipitosis starts the hide button is removed and it cannot be undone.
+function hide() {
+    clearTimeout(startTimeout)
+    clearTimeout(mipiTimeout)
+    twentyeightdayslatertheme.pause()
+    twentyeightdayslatertheme.currentTime = 0
+
+    // this actually hides the mipi stuff
+    Array.from(mipis).forEach(div => {
+        div.classList.toggle("hide")
+    })
 }

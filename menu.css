@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Knewave&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nerko+One&display=swap');
 :root{
-    --primary-color:#693e23;
-    --secondary-color:#d8a468;
+    --primary-color:rgb(122, 71, 51);
+    --secondary-color:rgb(255, 208, 146);
     --tertiary-color:#ffb8b8;
     --text-dark: #212529;
     --white: #ffffff;
@@ -213,6 +213,10 @@ nav{
     border-radius: 1rem;
 }
 
+.mipibg {
+    background-image: url(stuf/mipi.webp) !important;
+}
+
 .banner-card:nth-child(1) {
     background-image: url(stuf/v913o7bo2g481\ 2.jpg);
     background-size: cover;
@@ -328,6 +332,7 @@ nav{
 }
 
 .order-card {
+    position: relative;
     padding: 2rem 1rem;
     border-radius: 1rem;
     text-align: center;
@@ -410,6 +415,80 @@ nav{
 .moreinfo p span {
     font-size: 1.15rem;
     font-weight: bold;
+}
+
+#show-more {
+    top: -100px;
+    position: absolute;
+    margin: 0 auto;
+    left: calc(50% - 75px);
+}
+
+#show-more img {
+    position: absolute;
+    width: 150px;
+    pointer-events: none;
+    transition: 0.2s ease;
+}
+
+#show-more button {
+    font-family: var(--header-font-2);
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    height: 50px;
+    width: 150px;
+    padding: 5px;
+    transition: 0.2s ease;
+}
+
+#show-more button:hover {
+    background-color: rgb(255, 220, 175);;
+    cursor: pointer;
+    height: 51px;
+    width: 153px;
+    transition: 0.2s ease
+}
+
+#hidebtn {
+    margin-top: 50px;
+    font-family: var(--header-font-2);
+    font-size: 1.25rem;
+    color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    height: 300px;
+    width: 150px;
+    padding: 5px;
+    transition: 0.2s ease;
+}
+
+#hidebtn:hover {
+    background-color: rgb(255, 220, 175);;
+    cursor: pointer;
+    height: 310px;
+    width: 155px;
+    transition: 0.2s ease
+}
+
+.hide {
+    display: none !important;
+}
+
+.hide2 {
+    transition: 0.25s ease;
+    opacity: 0;
+}
+
+#schrodinger1, #schrodinger2 {
+    transition: 0.25s ease;
+}
+
+#event {
+    position: relative;
 }
 
 .event-content {
