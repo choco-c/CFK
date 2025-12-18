@@ -580,14 +580,14 @@ function mipitosis() {
 
         // creates an array from all images, excluding things using css for a background-image
         nonmipiimgs = Array.from(document.querySelectorAll("img"))
-        .filter(img => img.getAttribute("src") !== "stuf/mipi.webp" && !img.closest(".order-card"))
+        .filter(img => img.getAttribute("src") !== "stuf/mipi.png" && !img.closest(".order-card"))
 
-        // every 4 times and if there are any non-mipi images left, this takes a random img and replaces the source with mipi.webp and shows in the console the amount of images left
+        // every 4 times and if there are any non-mipi images left, this takes a random img and replaces the source with mipi.png and shows in the console the amount of images left
         if (nonmipiimgs.length > 0 && imgcounter % 4 == 0) {
             console.log(`%c${nonmipiimgs.length} image survivors left`, "color: green")
             const randomimgnum = Math.floor(Math.random() * nonmipiimgs.length)
             const randomimg = nonmipiimgs[randomimgnum]
-            randomimg.src = "stuf/mipi.webp"
+            randomimg.src = "stuf/mipi.png"
         }
 
         
