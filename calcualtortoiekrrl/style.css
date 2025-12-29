@@ -175,31 +175,7 @@ button:active {
 }
 
 #beeps{
-    background-image: url(beepspfp.png);
-    background-size: cover;
-}
-#beeps:hover {
-    filter: brightness(0.8);
-}
-
-#beeps:active {
-    filter: brightness(0.7);
-}
-
-#beeps{
-    background-image: url(beepspfp.png);
-    background-size: cover;
-}
-#beeps:hover {
-    filter: brightness(0.8);
-}
-
-#beeps:active {
-    filter: brightness(0.7);
-}
-
-#beeps{
-    background-image: url(beepspfp.png);
+    background-image: url(silly.jpg);
     background-size: cover;
 }
 #beeps:hover {
@@ -507,42 +483,6 @@ button:active {
 }
 
 #bread:active {
-    filter: brightness(0.7);
-}
-
-#beeps{
-    background-image: url(beepspfp.png);
-    background-size: cover;
-}
-#beeps:hover {
-    filter: brightness(0.8);
-}
-
-#beeps:active {
-    filter: brightness(0.7);
-}
-
-#beeps{
-    background-image: url(beepspfp.png);
-    background-size: cover;
-}
-#beeps:hover {
-    filter: brightness(0.8);
-}
-
-#beeps:active {
-    filter: brightness(0.7);
-}
-
-#beeps{
-    background-image: url(beepspfp.png);
-    background-size: cover;
-}
-#beeps:hover {
-    filter: brightness(0.8);
-}
-
-#beeps:active {
     filter: brightness(0.7);
 }
 

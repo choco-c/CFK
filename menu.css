@@ -445,10 +445,9 @@ nav{
 }
 
 #show-more button:hover {
-    background-color: rgb(255, 220, 175);;
+    color: black;
+    background-color: rgb(209, 57, 57);;
     cursor: pointer;
-    height: 51px;
-    width: 153px;
     transition: 0.2s ease
 }
 
@@ -646,16 +645,13 @@ nav{
     display: block;
     background-color: #21213f;
     padding: 15px;
-    border-radius: 10px;
+    border-radius: 3px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
 
 .question h1 {
     margin: 5px 0px;
-    border-radius: 15px;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
     padding: 2px;
     color: white;
     width: 75vw;
@@ -681,7 +677,7 @@ nav{
     height: 55px;
     background-color: rgb(24, 18, 36);
     padding: 15px;
-    border-radius: 15px;
+    border-radius: 3px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     text-align: left;
@@ -694,7 +690,7 @@ nav{
     margin: 15px 0;
     margin-right: 15px;
     border: 2px black solid;
-    border-radius: 10px;
+    border-radius: 3px;
 }
 
 /* scroll to top button */
@@ -828,13 +824,13 @@ nav{
     font-weight: 485;
 }
 
-#srpc, #cg, #calclink, #login, #slider {
+#srpc, #cg, #calclink, #login, #slider, #clickerlink {
     margin: 30px;
     font-size: 1.4rem;
     color: rgb(181, 169, 223);
 }
 
-#srpc:hover, #cg:hover, #calclink:hover, #login:hover, #slider:hover {
+#srpc:hover, #cg:hover, #calclink:hover, #login:hover, #slider:hover, #clickerlink:hover {
     font-size: 1.45rem;
     color: rgb(212, 212, 255);
 }

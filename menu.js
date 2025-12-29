@@ -63,7 +63,7 @@ option3.addEventListener('click', () => {
 mute.addEventListener('click', () => {
     kittensong.pause();
     sillysong.pause();
-    meowzers1.play()
+    meowzers1.pause()
 });
 
 //toggles between if the popup is visible or not

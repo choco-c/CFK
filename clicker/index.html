@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+        rel="stylesheet"/>
+</head>
+<body>
+    <!-- <div id="tutorial">tutorial</div> -->
+<main id="kont-teener">
+
+    <img src="images/mipi.webp" id="mipi" onclick="mipicaught()">
+    
+    
+    <div id="menubtn" onclick="openmenu()"><i class="ri-menu-5-line"></i></div>
+    <div id="menu">
+        <i class="ri-close-line" onclick="openmenu()" id="closemenu"></i>
+        <div id="cheatspassword">
+            <input type="text" placeholder="password" id="password"><br>
+            <button id="passwordbutton" onclick="allowcheats()">Allow Cheats<i class="ri-lock-unlock-fill"></i></button>
+        </div>
+        <div id="cheats">
+            <p>Cash:</p>
+            <i class="ri-close-line" onclick="cheats()"></i>
+            <div class="cheat cashcheat" id="cheat1" onclick="cashcheat1()">+100 cash</div>
+            <div class="cheat cashcheat" id="cheat2" onclick="cashcheat2()">+1000 cash</div>
+            <div class="cheat cashcheat" onclick="cashcheat3()">+10000 cash</div>
+            <p>Unlock:</p>
+            <div class="cheat unlockcheat" onclick="unlockcheat1()">Unlock Cheesepurrger</div>
+            <div class="cheat unlockcheat" onclick="unlockcheat2()">Unlock Kitshake</div>
+            <div class="cheat unlockcheat" onclick="unlockcheat3()">Unlock Cat Collector</div>
+            <div class="cheat unlockcheat" onclick="unlockcheat4()">Unlock Customer Service</div>
+        </div>
+    </div>
+
+    <div id="title">
+        <h1>CFK Clicker <br>version: Pre-Alpha 1.0</h1>
+    </div>
+
+
+    <div id="cashcontainer">
+        <div id="cash">Cash:0</div><br>
+    </div>
+
+    <div id="statscontainer">
+        <div id="clickpowercontainer" class="stats">
+            <img src="images/cursorpower2.png">
+            <div id="clickpower">Pow:1</div>
+        </div>
+        <div id="cpscontainer" class="stats">
+            <img src="images/lightninbolt.png">
+            <div id="cps">Cps:0</div>
+        </div>
+        <div id="totalclickscontainer" class="stats">
+            <img src="images/cursorsall.png">
+            <div id="totalclicks">Tot:0</div>
+        </div>
+    </div>
+
+    <div id="circlecontainer">
+        <p id="crithit">Critical hit!</p>
+        <img src="images/kittenwing.png" id="circle" onclick="circleclick()"></img>
+        <!-- <div id="circle" onclick="circleclick()"></div> -->
+    </div>
+
+    <div id="upgrades">
+        <div class="title">Upgrades:</div>
+
+            <div class="upgrade" id="upgrade1">
+                <div class="power">Eat A Kitten Wing (+1 Click Power)</div>
+                <div class="amount" id="amount1">Amount: 0</div>
+                <div class="cost" id="cost1" onclick="buyUpgrade1()">Buy: $30</div>
+            </div>
+
+        <div class="upgrade" id="upgrade2">
+            <div class="power">Eat Cheesepurrger (5% chance of critical click)</div>
+            <div class="amount" id="amount4">Not Purchased</div>
+            <div class="cost" id="cost4" onclick="buyUpgrade2()">Buy: $3000</div>
+        </div>
+
+        <div class="upgrade" id="upgrade3">
+            <div class="power">Drink A Kitshake (+5 Click Power)</div>
+            <div class="amount" id="amount6">Amount: 0</div>
+            <div class="cost" id="cost6" onclick="buyUpgrade3()">Buy: $400</div>
+        </div>
+
+        <div class="upgrade" id="upgrade4">
+            <div class="power">Mipi-tosis (4% chance of mipi / second)</div>
+            <div class="amount" id="amount7">Not Purchased</div>
+            <div class="cost" id="cost7" onclick="buyUpgrade4()">Buy: $10000</div>
+        </div>
+
+        <div class="upgrade" id="upgrade5">
+            <div class="power">Give Cat Chefs Steroids (x3 their CPS)</div>
+            <div class="amount" id="amount9">Not Purchased</div>
+            <div class="cost" id="cost9" onclick="buyUpgrade5()">Buy: $25000</div>
+        </div>
+
+        <!-- steroids -->
+
+    </div>
+
+
+    <!-- buildings -->
+    <div id="buildings">
+        <div class="title">Buildings:</div>
+
+        <div id="building-grid">
+            <!-- building one -->
+            <div class="building" id="building1">
+                <div class="power" id="power1">Hire Cat Chef (+2 Cash Per Second)</div>
+                <div class="amount" id="amount2">Amount: 0</div>
+                <div class="cost" id="cost2" onclick="buyBuilding1()">Buy: $50</div>
+            </div>
+            <div class="buildingsbg" id="buildingsbg1">
+                <img src="images/catchefnobg.png" class="buildingimg" id="buildingimg1">
+            </div>
+
+            <!-- building two -->
+            <div class="building" id="building2">
+                <div class="power">Hire Cat Collector (+6 Cash Per Second)</div>
+                <div class="amount" id="amount3">Amount: 0</div>
+                <div class="cost" id="cost3" onclick="buyBuilding2()">Buy: $250</div>
+            </div>
+            <div class="buildingsbg" id="buildingsbg2">
+                <img src="images/catcollectinghorse.png" class="buildingimg" id="buildingimg2">
+            </div>
+
+            <!-- building three -->
+            <div class="building" id="building3">
+                <div class="power">Hire Customer Service (+18 Cash Per Second)</div>
+                <div class="amount" id="amount5">Amount: 0</div>
+                <div class="cost" id="cost5" onclick="buyBuilding3()">Buy: $1000</div>
+            </div>
+            <div class="buildingsbg" id="buildingsbg3">
+                <img src="images/notadogthumbup.png" class="buildingimg" id="buildingimg3">
+            </div>
+
+            <!-- building four -->
+            <div class="building" id="building4">
+                <div class="power">Buy Restaurant Building  (+60 Cash per second)</div>
+                <div class="amount" id="amount8">Amount: 0</div>
+                <div class="cost" id="cost8" onclick="buyBuilding4()">Buy: $8000</div>
+            </div>
+            <div class="buildingsbg" id="buildingsbg4">
+                <img src="images/cfkrestaurant.png" class="buildingimg" id="buildingimg4">
+            </div>
+
+            <!-- building five -->
+            <div class="building" id="building5">
+                <div class="power">The Sahara Dessert (+600 Cash Per Second)</div>
+                <div class="amount" id="amount10">Not Purchased</div>
+                <div class="cost" id="cost10" onclick="buyBuilding5()">Buy: $120000</div>
+            </div>
+            <div class="buildingsbg" id="buildingsbg5"></div>
+        </div>
+    </div>
+
+
+</main>
+<script src="script.js"></script>
+</body>
+</html>
